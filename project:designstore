@@ -1,0 +1,10 @@
+CREATE TABLE items (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER);
+
+INSERT INTO items VALUES (1, "t-shirt", 48,1);
+INSERT INTO items VALUES (2, "shorts", 36, 4);
+INSERT INTO items VALUES (3, "dress", 34, 8);
+INSERT INTO items VALUES (4, "pants", 45, 3);
+INSERT INTO items VALUES (5, "jackets",56, 3);
+INSERT INTO items VALUES (6, "shoes",22, 4);
+
+SELECT * FROM items GROUP BY aisle;
