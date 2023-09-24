@@ -1,0 +1,68 @@
+CREATE TABLE singers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER);
+    
+INSERT INTO singers (fullname, age) VALUES ("Alicia Keys", "48");
+INSERT INTO singers (fullname, age) VALUES ("Bob Marley", "56");
+INSERT INTO singers (fullname, age) VALUES ("Miley Cyrus", "32");
+INSERT INTO singers (fullname, age) VALUES ("Taylor Swift", "32");
+INSERT INTO singers (fullname, age) VALUES ("Selena Gomez", "29");
+INSERT INTO singers (fullname, age) VALUES ("Joe Jonas", "35");
+INSERT INTO singers (fullname, age) VALUES ("Nick Jonas", "32");
+INSERT INTO singers (fullname, age) VALUES ("Katy Perry", "40");
+INSERT INTO singers (fullname, age) VALUES ("Britney Spears", "48");
+INSERT INTO singers (fullname, age) VALUES ("Beyonce Knowles", "45");
+INSERT INTO singers (fullname, age) VALUES ("Zendaya", "27");
+INSERT INTO singers (fullname, age) VALUES ("Sabrina Carpenter", "23");
+INSERT INTO singers (fullname, age) VALUES ("Olivia Rodrigo", "19");
+INSERT INTO singers (fullname, age) VALUES ("Lana Del Ray", "34");
+INSERT INTO singers (fullname, age) VALUES ("NIKI", "23");
+
+CREATE table hobbies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    name TEXT);
+    
+INSERT INTO hobbies (person_id, name) VALUES (1, "gardening");
+INSERT INTO hobbies (person_id, name) VALUES (2, "surfing");
+INSERT INTO hobbies (person_id, name) VALUES (3, "dancing");
+INSERT INTO hobbies (person_id, name) VALUES (4, "journaling");
+INSERT INTO hobbies (person_id, name) VALUES (5, "cooking");
+INSERT INTO hobbies (person_id, name) VALUES (6, "golfing");
+INSERT INTO hobbies (person_id, name) VALUES (7, "babysitting");
+INSERT INTO hobbies (person_id, name) VALUES (8, "singing");
+INSERT INTO hobbies (person_id, name) VALUES (9, "caring");
+INSERT INTO hobbies (person_id, name) VALUES (10, "swimming");
+INSERT INTO hobbies (person_id, name) VALUES (11, "modeling");
+INSERT INTO hobbies (person_id, name) VALUES (12, "swinging");
+INSERT INTO hobbies (person_id, name) VALUES (13, "showering");
+INSERT INTO hobbies (person_id, name) VALUES (14, "smoking");
+INSERT INTO hobbies (person_id, name) VALUES (15, "humming");
+
+CREATE table town (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    name TEXT);
+    
+INSERT INTO town (person_id, name) VALUES (1, "New York");
+INSERT INTO town (person_id, name) VALUES (2, "Hawaii");
+INSERT INTO town (person_id, name) VALUES (3, "California");
+INSERT INTO town (person_id, name) VALUES (4, "Nashville");
+INSERT INTO town (person_id, name) VALUES (5, "New Mexico");
+INSERT INTO town (person_id, name) VALUES (6, "California");
+INSERT INTO town (person_id, name) VALUES (7, "Los Angles");
+INSERT INTO town (person_id, name) VALUES (8, "St. Baltimore");
+INSERT INTO town (person_id, name) VALUES (9, "New Jersey");
+INSERT INTO town (person_id, name) VALUES (10, "FLorida");
+INSERT INTO town (person_id, name) VALUES (11, "Georgia");
+INSERT INTO town (person_id, name) VALUES (12, "Georgetown");
+INSERT INTO town (person_id, name) VALUES (13, "New Hampshire");
+INSERT INTO town (person_id, name) VALUES (14, "New Jersey");
+INSERT INTO town (person_id, name) VALUES (15, "New Hampton");
+
+SELECT singers.fullname AS SINGER , hobbies.name AS HOBBIES, town.name AS TOWN FROM singers
+    JOIN hobbies
+    ON singers.id = hobbies.id
+    JOIN town
+    ON hobbies.id = town.id;
