@@ -1,0 +1,18 @@
+CREATE TABLE app (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    released_year INTEGER);
+    
+    
+INSERT INTO app (name, released_year)
+    VALUES ("polka", 2023);
+INSERT INTO app (name, released_year)
+    VALUES ("pulsy", 2015);
+INSERT INTO app (name, released_year)
+    VALUES ("blandam", 1990);
+    
+SELECT * FROM app;
+
+UPDATE app SET name = "polka" WHERE name = "gooma";
+
+SELECT * FROM app;
